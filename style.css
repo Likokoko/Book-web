@@ -388,3 +388,34 @@ p {
 .button-80:not(:disabled):active {
   transform: translateY(0.125rem);
 }
+
+.generatorPage {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  padding-bottom: 20px;
+  position: fixed;
+  top: 100px;
+  left: 320px;
+  border-radius: 15px;
+}
+
+.pickLine{
+  margin:10px;
+  font-size: large;
+}
+
+.numberPicked{
+  height: 50px;
+  width:150px;
+  font-size: 30px;
+  margin-bottom:10px;
+}
+
+.numberPicked::placeholder {
+  font-size: 16px;
+}
