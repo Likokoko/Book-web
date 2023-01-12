@@ -56,26 +56,42 @@ function splitWords(str) {
   return words;
 }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
 const selected = [];
 const getNum = 0;
 const pick = document.getElementById("pick");
 const numberPicked = document.querySelector(".numberPicked");
 let pickNum = [];
+const genreArray = splitWords(genre);
+const genreCard = document.querySelector(".genreCard");
+const lotteryBtn = document.querySelector(".button-48")
+const genrePage = document.querySelector(".generatorPage")
+
+function showGenrePage(){ 
+  console.log("hjbhj")
+  if (genrePage.classList.contains("hidden")){
+     genrePage.classList.remove("hidden");
+  }else {
+    genrePage.classList.add("hidden")
+  }
+}
 
 pick.addEventListener("click", () => {
+  let asked = false;
   if (numberPicked.value > 26) {
     alert("We only provide 26 kinds of genres, sweet pie!");
-  } else {
-    for (let i = 0; i <= numberPicked.value; i++) {
-      i += splitWords(genre);
-      pickNum.push(i) 
+  } //else if ((asked = true)) {
+    //console.log("second asked = true condition");//why
+    //asked = false;}
+   else {
+    for (let i = 0; i < numberPicked.value; i++) {
+      randomItem = genreArray[Math.floor(Math.random() * genreArray.length)];
+      let link = document.createElement("a")
+      link.href = "https://www.googleapis.com/books/v1/{radomItem}/resourceID?parameters" //what
+      let genreTitle = document.createElement("p");
+      genreTitle.innerText = randomItem;
+      genreTitle.appendChild(link)
+      genreCard.appendChild(genreTitle);
+      asked = true;
     }
-      console.log(pickNum);
   }
 });
-
-

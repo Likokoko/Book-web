@@ -392,10 +392,6 @@ p {
 .generatorPage {
   width: 800px;
   height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: rgba(0, 0, 0, 0.92);
   padding-bottom: 20px;
   position: fixed;
@@ -404,18 +400,49 @@ p {
   border-radius: 15px;
 }
 
-.pickLine{
-  margin:10px;
+.whatever {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.pickLine {
+  margin: 10px;
   font-size: large;
 }
 
-.numberPicked{
+.numberPicked {
   height: 50px;
-  width:150px;
+  width: 150px;
   font-size: 30px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .numberPicked::placeholder {
   font-size: 16px;
+}
+
+.genreContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: center;
+}
+
+.genreCard {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: inherit;
+  width: 500px;
+  height: 160px;
+  flex-wrap: wrap;
+}
+
+.genreTitle {
+  font-size: 15px;
 }
